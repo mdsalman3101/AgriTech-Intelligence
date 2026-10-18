@@ -1,0 +1,1 @@
+package com.agritech.infrastructure;import java.net.http.HttpClient;import java.time.Duration;public final class HttpClientProvider{private HttpClientProvider(){}public static HttpClient create(){return HttpClient.newBuilder().connectTimeout(Duration.ofSeconds(8)).followRedirects(HttpClient.Redirect.NORMAL).build();}}

@@ -1,0 +1,39 @@
+AGRITECH INTELLIGENCE - MYSQL/JDBC FINAL
+========================================
+
+This final build DOES NOT store farmer/equipment data in CSV/TXT files.
+Application persistence uses MySQL through JDBC PreparedStatements.
+
+FIRST TIME ONLY
+---------------
+1. Start MySQL Server / MySQL Workbench.
+2. Open: sql\01_agritech_schema.sql
+3. Execute the complete SQL script (lightning button).
+4. In this project folder run:
+
+   powershell -ExecutionPolicy Bypass -File .\setup.ps1
+
+5. Enter MySQL username/password and optional API keys.
+
+NORMAL RUN
+----------
+Double-click RUN_ME.bat
+
+OR PowerShell:
+
+   powershell -ExecutionPolicy Bypass -File .\run.ps1
+
+VERIFY DATABASE IN WORKBENCH
+----------------------------
+Open and run:
+
+   sql\02_verify_database.sql
+
+You will see farmers, equipment and booking records created by the Java terminal app.
+
+SECURITY
+--------
+- JDBC PreparedStatements are used for database queries.
+- API keys and DB password are NOT stored in project files/source code.
+- Secrets are read from Windows user environment variables.
+- No fake/demo farmer/equipment records are inserted by SQL.
