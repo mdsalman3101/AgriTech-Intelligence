@@ -1,0 +1,1 @@
+package com.agritech.model;import com.agritech.enums.RiskLevel;import com.agritech.model.crop.Crop;public record SmartRecommendation(Crop crop,double score,String label,RiskLevel risk,double soilScore,double weatherScore,double waterScore,SowingAdvisory sowing,MandiPrice mandi,ProfitEstimate economics,String explanation){}

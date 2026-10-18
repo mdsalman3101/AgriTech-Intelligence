@@ -1,0 +1,1 @@
+package com.agritech.model;import java.time.Instant;import java.util.List;public record WeatherReport(List<DailyForecast> days,String location,String source,Instant retrievedAt,boolean cached){public WeatherReport{days=List.copyOf(days);}}
