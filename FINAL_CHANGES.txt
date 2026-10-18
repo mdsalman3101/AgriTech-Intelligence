@@ -1,0 +1,37 @@
+AGRITECH INTELLIGENCE - FINAL MYSQL/JDBC BUILD
+
+Major final change requested by faculty:
+- CSV/TXT farmer persistence removed.
+- CSV/TXT equipment persistence removed.
+- MySQL Workbench schema added.
+- JDBC FarmerRepository added.
+- JDBC EquipmentRepository added.
+- Equipment booking/return now uses MySQL transactions.
+- MySQL Connector/J dependency added to Maven.
+- JDBC uses PreparedStatement.
+- MySQL/API secrets moved to Windows user environment variables.
+- No config.properties secret file is required.
+- Mandi caches changed to in-memory only so no runtime cache files are written.
+- Option 8 now shows MySQL/JDBC status.
+
+Existing smart features preserved:
+- Colored terminal
+- Farmer-friendly Hinglish output
+- Open-Meteo weather/geocoding
+- Smart sowing advisor
+- Selected crop checker
+- Top crop recommendations
+- Mandi failover
+- Profit estimator
+- Equipment rental
+- EMI calculator
+- Loan affordability planner
+- Optional Gemini narration with safe local fallback
+
+FIRST TIME:
+1. Run sql/01_agritech_schema.sql in MySQL Workbench.
+2. Run setup.ps1.
+3. Run run.ps1.
+
+VERIFY:
+Run sql/02_verify_database.sql in Workbench after using the app.
